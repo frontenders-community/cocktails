@@ -1,2 +1,112 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Variables
+$glass-border: rgba(233, 233, 233, 0.75);
+$glass-width: 300px;
+$glass-height: 400px;
+$glass-border: 5px solid $glass-border;
+$glass-border-radius: 0 0 30px 30px;
+
+$ingredient-animation-duration: 400ms;
+$max-ingredients: 10;
+
+// Layout
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+// Glass
+.glass {
+  position: relative;
+  width: $glass-width;
+  height: $glass-height;
+  border: $glass-border;
+  border-top: 0;
+  border-radius: $glass-border-radius;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -22px;
+    width: 100%;
+    height: 40px;
+    border: $glass-border;
+    border-radius: 50%;
+  }
+
+  &__inner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    border-radius: $glass-border-radius;
+  }
+
+  .ingredient {
+    position: relative;
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+
+    &:last-child {
+      border-radius: $glass-border-radius;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+    }
+
+    &::after {
+      content: attr(part) " oz of " attr(name);
+      left: $glass-width + 30px;
+      min-width: 200px;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      content: "\2192";
+      left: $glass-width + 1px;
+      font-size: 2rem;
+      transform: translateY(calc(-50% - 5px));
+    }
+
+    &.animated {
+      animation-name: fill;
+      animation-duration: $ingredient-animation-duration;
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@for $i from 1 to $max-ingredients {
+  .animated-#{$i} {
+    animation-delay: $ingredient-animation-duration * $i;
+  }
+}
+
+@keyframes fill {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes showText {
 }

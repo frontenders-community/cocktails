@@ -1,0 +1,24 @@
+{
+  "name": "cocktails",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "css": "node-sass --include-path scss scss/general.scss style.css",
+    "watch": "nodemon -e scss -x 'npm run css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olga-demina/cocktails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olga-demina/cocktails/issues"
+  },
+  "homepage": "https://github.com/olga-demina/cocktails#readme",
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

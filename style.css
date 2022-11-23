@@ -33,8 +33,13 @@ a {
 section {
   padding: 2rem 0; }
 
-.title {
+header {
   text-align: center;
+  margin-bottom: 1rem; }
+  header img {
+    width: 200px; }
+
+.title {
   text-transform: uppercase; }
 
 .row {

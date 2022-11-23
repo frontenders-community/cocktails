@@ -1,0 +1,22 @@
+[
+  {
+    "name": "White Russian",
+    "ingredients": [
+      {
+        "name": "kahlùa",
+        "part": 1,
+        "color": "#66462F"
+      },
+      {
+        "name": "absolut vodka",
+        "part": 1,
+        "color": "#F5EDDA"
+      },
+      {
+        "name": "heavy cream",
+        "part": 1,
+        "color": "#CA9E7B"
+      }
+    ]
+  }
+]

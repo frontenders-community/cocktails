@@ -1,0 +1,14 @@
+// Layout
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+section {
+  padding: 2rem 0;
+}

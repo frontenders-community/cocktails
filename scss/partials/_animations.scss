@@ -1,0 +1,12 @@
+@keyframes fill {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes showText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

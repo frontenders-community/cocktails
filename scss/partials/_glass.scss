@@ -1,0 +1,65 @@
+// Glass
+.glass {
+  position: relative;
+  display: flex; // per evitare il collasso delle margini
+  width: $glass-width;
+  height: $glass-height;
+  border-top: 0;
+  background-color: $glass-border-color;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+
+  &__base {
+    margin-top: 4px;
+    height: 4px;
+    width: $glass-width;
+    background-color: $glass-border-color;
+  }
+
+  &__inner {
+    width: $glass-width - 8px;
+    height: $glass-height - 8px;
+    margin-left: 4px;
+    margin-top: 4px;
+    background-color: white;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    padding-top: 40px;
+  }
+
+  .ingredient {
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__description {
+      opacity: 0;
+      transform: translateY(2em);
+    }
+
+    &.animated {
+      animation-name: fill;
+      animation-duration: $ingredient-animation-duration;
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-fill-mode: forwards;
+
+      .ingredient__description {
+        animation-name: showText;
+        animation-duration: $ingredient-animation-duration;
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-fill-mode: forwards;
+      }
+    }
+
+    @for $i from 0 to $max-ingredients {
+      &.animated-#{$i} {
+        animation-delay: $ingredient-animation-duration * $i;
+
+        .ingredient__description {
+          animation-delay: ($ingredient-animation-duration * $i) + 100ms;
+        }
+      }
+    }
+  }
+}

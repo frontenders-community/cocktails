@@ -10,40 +10,77 @@
   </head>
   <body>
     <main>
-      <div class="wrapper">
+      <div class="container">
         <section id="menu">
-          <h1>Select a cocktail</h1>
+          <h1 class="title">Select a cocktail</h1>
         </section>
-        <section id="recipe">
+        <section id="recipe" class="row">
+          <!-- Left nav -->
+          <div class="col col--left">
+            <nav>
+              <ul class="cocktail-list">
+                <li>
+                  <a href="">White Russian</a>
+                </li>
+                <li>
+                  <a href="">Margarita</a>
+                </li>
+                <li>
+                  <a href="">Screwdriver</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <!-- glass -->
-          <div class="glass glass--tall">
-            <div class="glass__inner">
-              <div
-                class="ingredient animated animated-2"
-                style="height: calc(100% / 3); background-color: brown"
-              >
-                <p class="ingredient__description">1 oz of gin</p>
-              </div>
-              <div
-                class="ingredient animated animated-1"
-                style="height: calc(100% / 3); background-color: aqua"
-              >
-                <p class="ingredient__description">
-                  1 oz of Sweet red Vermouth
-                </p>
-              </div>
-              <div
-                class="ingredient animated animated-0"
-                style="height: calc(100% / 3); background-color: rebeccapurple"
-                name="Campari"
-                part="1"
-              >
-                <p class="ingredient__description">1 oz of Campari</p>
+          <div class="col col--main">
+            <div class="glass glass--tall">
+              <div class="glass__inner">
+                <div
+                  class="ingredient animated animated-2"
+                  style="height: calc(100% / 3); background-color: brown"
+                >
+                  <p class="ingredient__description">1 part of gin</p>
+                </div>
+                <div
+                  class="ingredient animated animated-1"
+                  style="height: calc(100% / 3); background-color: aqua"
+                >
+                  <p class="ingredient__description">
+                    1 part of Sweet red Vermouth
+                  </p>
+                </div>
+                <div
+                  class="ingredient animated animated-0"
+                  style="
+                    height: calc(100% / 3);
+                    background-color: rebeccapurple;
+                  "
+                  name="Campari"
+                  part="1"
+                >
+                  <p class="ingredient__description">1 part of Campari</p>
+                </div>
               </div>
             </div>
+            <div class="glass__base"></div>
           </div>
-          <div class="glass__base"></div>
           <!-- glass -->
+          <!-- Right nav -->
+          <div class="col col--right">
+            <nav>
+              <ul class="cocktail-list">
+                <li>
+                  <a href="">Bloody Mary</a>
+                </li>
+                <li>
+                  <a href="">Cosmopolitan</a>
+                </li>
+                <li>
+                  <a href="">Tequilla Sunrise</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </section>
       </div>
     </main>

@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap");
 @keyframes fill {
   to {
     transform: scaleY(1); } }
@@ -12,17 +8,54 @@
     opacity: 1;
     transform: translateY(0); } }
 
-.wrapper {
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: "Lato", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.container {
+  width: 80%;
   height: 100vh;
+  overflow-y: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto; }
+  justify-content: center; }
 
 section {
   padding: 2rem 0; }
+
+.title {
+  text-align: center;
+  text-transform: uppercase; }
+
+.row {
+  display: flex;
+  justify-content: space-between; }
+
+.col {
+  display: flex;
+  flex-direction: column; }
+  .col--left {
+    justify-content: center; }
+    .col--left ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+  .col--right {
+    justify-content: center; }
+    .col--right ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
 
 .glass {
   position: relative;
@@ -105,3 +138,8 @@ section {
       animation-delay: 3600ms; }
       .glass .ingredient.animated-9 .ingredient__description {
         animation-delay: 3700ms; }
+
+.cocktail-list {
+  list-style-type: none; }
+  .cocktail-list li {
+    margin: 1rem 0; }

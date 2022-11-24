@@ -17,25 +17,17 @@
         </header>
         <section id="recipe" class="row">
           <!-- Left nav -->
-          <div class="col col--left">
+          <div id="nav-left" class="col col--left">
             <nav>
               <ul class="cocktail-list">
-                <li>
-                  <a href="">White Russian</a>
-                </li>
-                <li>
-                  <a href="">Margarita</a>
-                </li>
-                <li>
-                  <a href="">Screwdriver</a>
-                </li>
+                <!-- Link inseriti dinamicamente -->
               </ul>
             </nav>
           </div>
           <!-- glass -->
           <div class="col col--main">
             <div class="glass glass--tall">
-              <div class="glass__inner">
+              <div class="glass__inner" id="glass-inner">
                 <div
                   class="ingredient animated animated-2"
                   style="height: calc(100% / 3); background-color: brown"
@@ -67,23 +59,17 @@
           </div>
           <!-- glass -->
           <!-- Right nav -->
-          <div class="col col--right">
+          <div id="nav-right" class="col col--right">
             <nav>
               <ul class="cocktail-list">
-                <li>
-                  <a href="">Bloody Mary</a>
-                </li>
-                <li>
-                  <a href="">Cosmopolitan</a>
-                </li>
-                <li>
-                  <a href="">Tequilla Sunrise</a>
-                </li>
+                <!-- Link inseriti dinamicamente -->
               </ul>
             </nav>
           </div>
         </section>
       </div>
     </main>
+
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>

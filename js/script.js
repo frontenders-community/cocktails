@@ -1,12 +1,8 @@
 const cocktails = await (await fetch("./data.json")).json();
-console.log(cocktails);
 
-// Generate two side navs
-const navLeft = document.querySelector("#nav-left ul");
-const navRight = document.querySelector("#nav-right ul");
-const arrayHalfIndex = Math.round(cocktails.length / 2);
-initNav(navLeft, cocktails.slice(0, arrayHalfIndex));
-initNav(navRight, cocktails.slice(arrayHalfIndex));
+// Generate cocktail nav
+const cocktailMenu = document.querySelector("#cocktail-menu ul");
+initNav(cocktailMenu, cocktails);
 
 function initNav(navContainer, cocktails) {
   cocktails.forEach((cocktail) => {
@@ -16,6 +12,7 @@ function initNav(navContainer, cocktails) {
     link.href = "";
     link.addEventListener("click", function (e) {
       e.preventDefault();
+      handleActiveClass(this);
       fillGlass(cocktail);
     });
     listItem.append(link);
@@ -23,11 +20,16 @@ function initNav(navContainer, cocktails) {
   });
 }
 
-function fillGlass({ name, ingredients }) {
+function handleActiveClass(target) {
+  const menuLinks = document.querySelectorAll(".cocktail-list a.active");
+  menuLinks.forEach((link) => link.classList.remove("active"));
+  target.classList.add("active");
+}
+
+function fillGlass({ ingredients }) {
   const innerGlass = document.getElementById("glass-inner");
   let ingredientsTemplate = "";
   const totalParts = getTotalParts(ingredients);
-  console.log(totalParts);
   for (let i = ingredients.length - 1; i >= 0; i--) {
     ingredientsTemplate += addIngredient(ingredients[i], i, totalParts);
   }

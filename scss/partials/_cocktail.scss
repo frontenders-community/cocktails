@@ -1,4 +1,11 @@
 // Glass
+.glass-wrapper {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .glass {
   position: relative;
   display: flex; // per evitare il collasso delle margini
@@ -34,6 +41,7 @@
     align-items: center;
 
     &__description {
+      font-size: 0.8rem;
       opacity: 0;
       transform: translateY(2em);
     }
@@ -65,10 +73,34 @@
 }
 
 // Cocktail nav
+
 .cocktail-list {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   li {
-    margin: 1rem 0;
+    margin: 5px;
+    width: calc(100% / 2 - 10px);
+    text-align: center;
+    background-color: $secondary-color-light;
+    border-radius: 10px;
+    font-weight: 500;
+
+    @include responde("md") {
+      width: calc(100% / 3 - 10px);
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 1em 0.5em;
+
+      &:hover,
+      &.active {
+        color: $secondary-color;
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@
 
 ## Challenge #3 - Cocktails
 
-In questa chgallenge andremo ad implementare un'app interattiva che permette di scoprire le ricette di alcuni dei cocktail più conosciuti. Al click su un cocktail presente nel menù, il bicchiere presente nella pagina dovrà riempirsi con gli ingredienti del cocktail cliccato.
+In questa challenge dovrete implementare un'app interattiva che permette di scoprire le ricette di alcuni dei cocktail più famosi. Al click su un cocktail presente nel menù, il bicchiere presente nella pagina dovrà riempirsi con gli ingredienti del cocktail cliccato.
 
 Il layout è abbastanza semplice, ma deve essere fatto responsive. La vera sfida sta nel disegnare il bicchiere e nell'applicare le animazioni agli ingredienti!
 

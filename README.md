@@ -16,6 +16,10 @@ Nello starter kit troverte una cartella assets:
 
 ### Consigli
 
+
+https://user-images.githubusercontent.com/56634652/204822255-906025fd-897c-41bb-99bd-10721d234d67.mp4
+
+
 Partite analizzando la struttura dati dei data (data.json).
 Inizialmente provate a creare un layout statico di un singolo cocktail. Poi provate ad animare gli ingredienti. Solo a quel punto rendete la pagina dinamica, con i pulsanti dei cocktail e il cambio degli ingredienti in base al cocktail selezionato.
 Per leggere il file json potete usare fetch.
@@ -25,3 +29,10 @@ Per leggere il file json potete usare fetch.
 
 HTML, CSS/SASS, React oppure JS plain.
 No librerie CSS.
+
+### Preview
+https://user-images.githubusercontent.com/56634652/204822275-f7376127-5cb4-4dc4-874c-6b1ee9da02b1.mp4
+
+
+
+
